@@ -25,13 +25,13 @@ data = [
 def hello():
     return "Hello Flask-Heroku"
 
-@app.route('/api', methods=['GET'])
-def get_api():
-    return jsonify(data)
-
 @app.route('/hello/<string:name>')
 def Home(name):
 	return render_template('home.html', name_html=name)
+
+@app.route('/api', methods=['GET'])
+def get_api():
+    return jsonify(data)
 
 @app.route('/name')
 def name():
