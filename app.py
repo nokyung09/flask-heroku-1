@@ -1,7 +1,7 @@
 from flask import Flask, jsonify
 from flask import Flask, render_template
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 data = [
         {
@@ -37,5 +37,5 @@ def Home(name):
 def name():
     return "<font color=Green>ปุญชรัสมิ์</font> <font color=blue>จันทร์กลม</font> <br> <font color=red>เลขที่15 ม.4/10</font> "
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run(debug=False)
