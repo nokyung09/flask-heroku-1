@@ -33,7 +33,6 @@ def get_api():
 def Home(name):
 	return render_template('home.html', name_html=name)
 
-
 @app.route('/name')
 def name():
     return "<font color=Green>จุฑารัตน์</font> <font color=pink>อยู่เจียม</font> <br> <font color=blue>เลขที่9 ม.4/10</font> "
