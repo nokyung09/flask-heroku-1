@@ -51,7 +51,7 @@ def Home(name):
 
 @app.route('/name')
 def name():
-    return"<font color=red>กฤษณา อยู่ถนอม</font> <br> เลขที่5 ชั้นม.4/10"    
+    return"<font color=red>จุฑารัตน์ อยู่เจียม</font> <br> เลขที่9 ชั้นม.4/10"    
 
 @app.route('/video')
 def index():
