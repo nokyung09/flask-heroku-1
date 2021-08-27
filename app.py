@@ -5,6 +5,7 @@ import cv2
 camera = cv2.VideoCapture('rtsp://freja.hiof.no:1935/rtplive/_definst_/hessdalen03.stream')
 
 app = Flask(__name__)
+
 def gen_frames():  # generate frame by frame from camera
     while True:
         # Capture frame-by-frame
