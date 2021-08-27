@@ -5,7 +5,6 @@ import cv2
 camera = cv2.VideoCapture('rtsp://freja.hiof.no:1935/rtplive/_definst_/hessdalen03.stream')
 
 app = Flask(__name__)
-
 def gen_frames():  # generate frame by frame from camera
     while True:
         # Capture frame-by-frame
@@ -50,8 +49,6 @@ def get_api():
 @app.route('/name')
 def name():
     return "<font color=pink>จุฑารัตน์</font> <font color=purple>อยู่เจียม</font> <br> <font color=red>เลขที่9 ม.4/10</font> "
-
-
 
 @app.route('/video')
 def index():
