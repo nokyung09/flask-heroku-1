@@ -17,6 +17,7 @@ def gen_frames():  # generate frame by frame from camera
             frame = buffer.tobytes()
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')  # concat frame one by one and show result
+
 data = [
         {
             "id": 1,
@@ -39,17 +40,18 @@ data = [
 def hello():
     return "Hello Flask-Heroku"
 
-@app.route('/hello/<string:name>')
-def Home(name):
-	return render_template('home.html', name_html=name)
 
 @app.route('/api', methods=['GET'])
 def get_api():
     return jsonify(data)
 
+@app.route('/hello/<string:name>')
+def Home(name):
+	return render_template('home.html', name_html=name)
+
 @app.route('/name')
 def name():
-    return "<font color=pink>จุฑารัตน์</font> <font color=purple>อยู่เจียม</font> <br> <font color=red>เลขที่9 ม.4/10</font> "
+    return"<font color=red>กฤษณา อยู่ถนอม</font> <br> เลขที่5 ชั้นม.4/10"    
 
 @app.route('/video')
 def index():
